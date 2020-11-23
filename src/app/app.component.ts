@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs/operators'
+import * as $ from 'jquery';
 
 
 @Component({
@@ -40,6 +41,27 @@ export class AppComponent  implements OnInit {
          this.titleService.setTitle(title);
       });
 
+  }
+
+  menuToggle(){
+    $(document).ready(() => {
+
+      if ( $('#links').is(':visible')){
+        this.menuHide();
+      }else {
+        this.menuShow();
+      }
+
+    });
+    return false;
+  }
+
+  menuHide(){
+    $('#links').slideUp('fast');
+  }
+
+  menuShow(){
+    $('#links').slideDown('fast');
   }
 
   ngOnInit(): void {

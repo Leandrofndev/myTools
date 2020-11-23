@@ -1,14 +1,35 @@
-<header></header>
+<header>
+
+<img src="./assets/img/Logo-transparente-peq.png" alt="Logotipo MyTools - Caixa de ferramentas">
 <h1>MyTools</h1>
+</header>
 
 <nav>
-  <a href="/home">Inicio</a>
-  <a href="/list">Ferramentas</a>
-  <a href="/new">Novo</a>
+  <a routerLink="/home"><i class="fas fa-fw fa-home"></i></a>
+
+  <div id="links">
+  <a routerLink="/list"><i class="fas fa-fw fa-toolbox"></i> Suas Ferramentas</a>
+  <a routerLink="/new"><i class="fas fa-fw fa-plus-square"></i> Nova Ferramenta</a>
+  <a routerLink="/about"><i class="fas fa-info-circle"></i>  Sobre o MyTools</a>
+</div>
+ <a routerLink="/home" id="menu" (click) ='menuToggle()'><i class="fas fa-fw fa-ellipsis-v"></i></a>
 </nav>
 
+<main>
 <router-outlet></router-outlet>
+</main>
 
 <footer>
-  <p>&copy; 2020 MyTools</p>
+  <div class="left">
+  <i class="far fa-fw fa-copyright"></i> 2020 MyTools.
+ </div>
+
+ <div class="right">
+   <a href=""><i class="far fa-fw fa-facebook"></i></a>
+   <a href=""><i class="far fa-fw fa-youtube"></i></a>
+   <a href=""><i class="far fa-fw fa-linkedin"></i></a>
+
+
+
+ </div>
 </footer>

@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+/* CSS resset */
+
+*{
+  box-sizing: border-box;
+}
+
+html,
+body{
+  width: 100%;
+  padding: 0;
+  margin: 0px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 14px;
+}
+
+body{
+  background-image: url(assets/img/bg-amarelo.jpg);
+  background-attachment: fixed;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(228, 224, 20);
+  color: rgb(228, 224, 20);
+}
+
+a{
+  color: rgb(228, 224, 20);
+  text-decoration: none;
+  border-bottom: 1px dotted rgb(228, 224, 20);
+  display: inline-block;
+}
+
+a:hover{
+  color: rgb(2228, 224, 20);
+  border-bottom: 1px dotted rgb(228, 224, 20);
+}
+
+/* stick footer */
+
+html, body, app-root{
+  position: relative;
+  height: 100%;
+}
+
+app-root{
+ min-height: 100%;
+ display: flex;
+ flex-direction: column;
+ }
+
+/*botões*/
+
+.basic-button{
+  display: inline-block;
+  padding: .5rem 1rem;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(rgb(230, 226, 0), rgb(240, 155, 29));
+  border-radius: 10rem;
+  border: none;
+}
+
+.basic-button:hover{
+  color: rgb(243, 241, 122);
+  background: linear-gradient( rgb(253, 228, 86),rgb(56, 31, 2));
+  border: none;
+}
+
+/* Classes de uso geral*/
+
+.center{
+  text-align: center;
+}
+
