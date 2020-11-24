@@ -19,37 +19,43 @@ nav{
   display: flex;
   justify-content: space-between;
   position: relative;
+  padding: .5rem;
+  padding: .5rem;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, .9);
 }
 
 nav a{
   display: block;
   padding: .3rem;
+  font-size: 12px;
   text-transform: uppercase;
   border: none;
-  /* border-radius: 5px; */
+  border-radius: 5px;
 }
 
 nav a:hover{
-  background: rgb(0, 0, 0);
+  background: black;
   color: rgb(253, 228, 86);
 }
 
 #links {
+  font-size: 12px;
   display: none;
   position: absolute;
-  top: 3.5rem;
+  top: 2.5rem;
   right: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.6);
   margin: 0 .6rem;
   padding: 0 .8rem;
-  /* border-radius: 10px; */
+  border-radius: 5px;
 }
 
 main{
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.72);
   margin: 0 .6rem;
   padding: 0 .8rem;
-  /* border-radius: 5px; */
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, .9);
+  border-radius: 5px;
 
 }
 
@@ -58,14 +64,8 @@ footer{
   padding: .6rem;
   font-style: italic;
   font-size: .8rem;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, .9);
 
-}
-footer.left{
-  float: left;
-}
-
-footer.right{
-  float: right;
 }
 
 nav, footer{
@@ -73,10 +73,47 @@ nav, footer{
   background: rgba(0, 0, 0, 0.6);
   margin: 0 .6rem;
   padding: 0 .8rem;
-  /* border-radius: 5px; */
+  border-radius: 5px;
+}
+
+#social a{
+  top: 2.5rem;
+  right: 0;
+  margin: 0 .6rem;
+  padding: 0 .8rem;
+  display: inline-block;
+  border: none;
+  padding: 0.2rem;
+}
+
+#social a:hover {
+  background: black;
+  color: rgb(253, 228, 86);
+  border-radius: 5px;
 }
 
 /* Stick footer */
 main{
   flex-grow: 1;
+  margin: .6rem;
+
+}
+
+/* Responsividade do app */
+
+@media ( min-width: 550px){
+  #menu {
+    display:none;
+  }
+  #links{
+    position: relative;
+    display: block;
+    top: 0;
+    margin: 0;
+    background: transparent;
+  }
+  #links a {
+    margin: 0 0 0 1rem;
+    display: inline-block;
+  }
 }

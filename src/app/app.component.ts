@@ -66,6 +66,23 @@ export class AppComponent  implements OnInit {
 
   ngOnInit(): void {
     this.changeTitle();
+
+    $(document).ready(() => {
+
+      $(window).resize(() => {
+        if(window.innerWidth > 549){
+          $('#links').show(0);
+        }else{
+          $('#links').hide(0);
+        }
+      });
+
+      $(document).on('click', '#links > a', () => {
+        $('#links').slideUp('fast');
+      })
+
+    });
+
   }
 
 }

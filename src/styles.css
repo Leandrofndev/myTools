@@ -10,13 +10,13 @@ body{
   padding: 0;
   margin: 0px;
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 body{
   background-image: url(assets/img/bg-amarelo.jpg);
   background-attachment: fixed;
-  background-position: bottom left;
+  background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(228, 224, 20);
@@ -60,7 +60,7 @@ app-root{
 }
 
 .basic-button:hover{
-  color: rgb(243, 241, 122);
+  color: rgb(230, 226, 0);
   background: linear-gradient( rgb(253, 228, 86),rgb(56, 31, 2));
   border: none;
 }
@@ -70,4 +70,6 @@ app-root{
 .center{
   text-align: center;
 }
+
+
 

@@ -1,10 +1,10 @@
-<header>
+<header >
 
 <img src="./assets/img/Logo-transparente-peq.png" alt="Logotipo MyTools - Caixa de ferramentas">
 <h1>MyTools</h1>
 </header>
 
-<nav>
+<nav class="hborder">
   <a routerLink="/home"><i class="fas fa-fw fa-home"></i></a>
 
   <div id="links">
@@ -12,7 +12,7 @@
   <a routerLink="/new"><i class="fas fa-fw fa-plus-square"></i> Nova Ferramenta</a>
   <a routerLink="/about"><i class="fas fa-info-circle"></i>  Sobre o MyTools</a>
 </div>
- <a routerLink="/home" id="menu" (click) ='menuToggle()'><i class="fas fa-fw fa-ellipsis-v"></i></a>
+ <a id="menu" (click) ='menuToggle()'><i class="fas fa-fw fa-ellipsis-v"></i></a>
 </nav>
 
 <main>
@@ -20,16 +20,15 @@
 </main>
 
 <footer>
-  <div class="left">
-  <i class="far fa-fw fa-copyright"></i> 2020 MyTools.
- </div>
 
- <div class="right">
-   <a href=""><i class="far fa-fw fa-facebook"></i></a>
-   <a href=""><i class="far fa-fw fa-youtube"></i></a>
-   <a href=""><i class="far fa-fw fa-linkedin"></i></a>
+<div id="copy">
+<i class="far fa-fw fa-copyright"></i>   2020 &nbsp; &nbsp; MyTools.
+</div>
 
+<div id="social">
+  <a target="#blank" href="http://facebook.com/dioinjpa"><i class="fab fa-facebook-square"></i></a>
+  <a target="#blank" href="https://www.instagram.com/dioinoficial"><i class="fab fa-instagram-square"></i></a>
+  <a target="#blank" href="https://www.linkedin.com/in/leandro-ferreira-7b186299"><i class="fab fa-linkedin"></i></a>
+</div>
 
-
- </div>
 </footer>
