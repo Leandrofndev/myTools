@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { filter, map } from 'rxjs/operators'
+import { filter, map } from 'rxjs/operators';
 import * as $ from 'jquery';
-
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  implements OnInit {
+export class AppComponent implements OnInit {
 
   pageTitle = 'myTools';
 
@@ -18,37 +17,36 @@ export class AppComponent  implements OnInit {
     private actvatedRoute: ActivatedRoute,
     private router: Router,
     private titleService: Title
-
   ) { }
 
-  changeTitle() {
+  changeTitle(): void {
 
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       map(() => {
         let child = this.actvatedRoute.firstChild;
-        while(child){
-          if(child.firstChild) {
+        while (child) {
+          if (child.firstChild) {
             child = child.firstChild;
-          }else if (child.snapshot.data && child.snapshot.data.title) {
+          } else if (child.snapshot.data && child.snapshot.data.title) {
             return `${child.snapshot.data.title} ~ ${this.pageTitle}`;
-          }else{
+          } else {
             return this.pageTitle;
           }
         }
         return this.pageTitle;
       })).subscribe((title: any) => {
-         this.titleService.setTitle(title);
+        this.titleService.setTitle(title);
       });
 
   }
 
-  menuToggle(){
-    $(document).ready(() => {
+  menuToggle(): boolean {
+    $(() => {
 
-      if ( $('#links').is(':visible')){
+      if ($('#links').is(':visible')) {
         this.menuHide();
-      }else {
+      } else {
         this.menuShow();
       }
 
@@ -56,33 +54,28 @@ export class AppComponent  implements OnInit {
     return false;
   }
 
-  menuHide(){
+  menuHide(): void {
     $('#links').slideUp('fast');
   }
 
-  menuShow(){
+  menuShow(): void {
     $('#links').slideDown('fast');
   }
 
   ngOnInit(): void {
     this.changeTitle();
 
-    $(document).ready(() => {
-
-      $(window).resize(() => {
-        if(window.innerWidth > 549){
+    $(() => {
+      $(window).on('resize', () => {
+        if (window.innerWidth > 549) {
           $('#links').show(0);
-        }else{
+        } else {
           $('#links').hide(0);
         }
       });
-
       $(document).on('click', '#links > a', () => {
         $('#links').slideUp('fast');
-      })
-
+      });
     });
-
   }
-
 }
