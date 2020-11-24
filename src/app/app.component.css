@@ -1,41 +1,45 @@
-header{
+header {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* text-shadow: -1px -1px rgb(243, 228, 14), -1px 1px rgb(243, 228, 14), 1px 1px rgb(243, 228, 14), 1px 1px rgb(243, 228, 14); */
-  margin: .5rem;
+  padding: .5rem;
 }
 
-header h1{
+header h1 {
   display: none;
-  /* font-size: 15px;
-  margin: 2rem 0  ;
-  margin-top: 3.6rem;
-  margin-left: .5rem;
-  letter-spacing: 3px; */
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: .5rem;
-  padding: .5rem;
+  padding: .4rem;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, .9);
+  margin: 0 .6rem;
 }
 
-nav a{
+nav>a {
+  border-radius: .4rem;
+}
+
+nav a {
   display: block;
-  padding: .3rem;
-  font-size: 12px;
+  padding: .5rem;
   text-transform: uppercase;
   border: none;
-  border-radius: 5px;
 }
 
-nav a:hover{
+#links a {
+  width: 100%;
+}
+
+nav>a:hover {
   background: black;
   color: rgb(253, 228, 86);
+}
+
+#links a:hover {
+  color: rgb(255, 235, 169);
 }
 
 #links {
@@ -44,39 +48,45 @@ nav a:hover{
   position: absolute;
   top: 2.5rem;
   right: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(34, 28, 0);
   margin: 0 .6rem;
   padding: 0 .8rem;
   border-radius: 5px;
+  box-shadow: 2px 2px 3px rgba(255, 255, 255, .3);
 }
 
-main{
+#links i {
+  margin-right: .3rem;
+}
+
+main {
   background: rgba(0, 0, 0, 0.72);
   margin: 0 .6rem;
   padding: 0 .8rem;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, .9);
   border-radius: 5px;
-
 }
 
-footer{
+footer {
   text-align: center;
-  padding: .6rem;
+  padding: .4rem;
   font-style: italic;
   font-size: .8rem;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, .9);
-
+  margin: 0 .6rem;
 }
 
-nav, footer{
+footer i {
+  font-size: 1rem;
+}
+
+nav, footer {
   color: rgb(253, 228, 86);
   background: rgba(0, 0, 0, 0.6);
-  margin: 0 .6rem;
-  padding: 0 .8rem;
   border-radius: 5px;
 }
 
-#social a{
+#social a {
   top: 2.5rem;
   right: 0;
   margin: 0 .6rem;
@@ -93,19 +103,30 @@ nav, footer{
 }
 
 /* Stick footer */
-main{
+
+html, body, .wrap, app-root {
+  position: relative;
+  height: 100%;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: .5rem;
+}
+
+main {
   flex-grow: 1;
   margin: .6rem;
-
 }
 
 /* Responsividade do app */
 
-@media ( min-width: 550px){
+@media ( min-width: 550px) {
   #menu {
-    display:none;
+    display: none;
   }
-  #links{
+  #links {
     position: relative;
     display: block;
     top: 0;

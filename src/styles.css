@@ -1,19 +1,19 @@
 /* CSS resset */
 
-*{
+* {
   box-sizing: border-box;
 }
 
-html,
-body{
+html, body {
   width: 100%;
+  height: 100%;
   padding: 0;
-  margin: 0px;
+  margin: 0;
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
 }
 
-body{
+body {
   background-image: url(assets/img/bg-amarelo.jpg);
   background-attachment: fixed;
   background-position: bottom right;
@@ -23,34 +23,21 @@ body{
   color: rgb(228, 224, 20);
 }
 
-a{
+a {
   color: rgb(228, 224, 20);
   text-decoration: none;
   border-bottom: 1px dotted rgb(228, 224, 20);
   display: inline-block;
 }
 
-a:hover{
+a:hover {
   color: rgb(2228, 224, 20);
   border-bottom: 1px dotted rgb(228, 224, 20);
 }
 
-/* stick footer */
-
-html, body, app-root{
-  position: relative;
-  height: 100%;
-}
-
-app-root{
- min-height: 100%;
- display: flex;
- flex-direction: column;
- }
-
 /*botões*/
 
-.basic-button{
+.basic-button {
   display: inline-block;
   padding: .5rem 1rem;
   color: rgb(0, 0, 0);
@@ -59,17 +46,14 @@ app-root{
   border: none;
 }
 
-.basic-button:hover{
+.basic-button:hover {
   color: rgb(230, 226, 0);
-  background: linear-gradient( rgb(253, 228, 86),rgb(56, 31, 2));
+  background: linear-gradient( rgb(253, 228, 86), rgb(56, 31, 2));
   border: none;
 }
 
 /* Classes de uso geral*/
 
-.center{
+.center {
   text-align: center;
 }
-
-
-
