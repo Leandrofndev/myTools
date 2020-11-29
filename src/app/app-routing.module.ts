@@ -6,15 +6,13 @@ import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { NewComponent } from './new/new.component';
 
-
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent },
-  { path: 'list', component: ListComponent, data: {title: 'Lista de Ferramentas'} },
-  { path: 'new', component: NewComponent, data: {title: 'Nova Ferramenta'} },
-  { path: 'about', component:  AboutComponent, data: {title: 'Sobre o MyTools'} },
-  { path: '**', component: E404Component, data: {title: 'Página não encontrada'}}
-
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, data: { title: '' } },
+  { path: 'list', component: ListComponent, data: { title: 'Lista de Ferramentas' } },
+  { path: 'new', component: NewComponent, data: { title: 'Nova Ferramenta' } },
+  { path: 'about', component: AboutComponent, data: { title: 'Sobre o MyTools' } },
+  { path: '**', component: E404Component, data: { title: 'Página não encontrada' } }
 ];
 
 @NgModule({
