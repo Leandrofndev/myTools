@@ -1,2 +1,51 @@
 <h2>Lista de Ferramentas</h2>
-<p>Aqui aparecerá a lista de ferramentas cadastradas</p>
+
+
+
+<!--  Ferramentas de ordenação   -->
+
+<div>
+
+    <!--  Escolha do campo pelo qual ordenar (default: name)  -->
+    <div>
+        Ordem
+        <select name="orderby" (change)="changeOrderField($event.value)" >
+            <option value="name">Nome</option>
+            <option value="date">Data</option>
+            <option value="brand">Marca</option>
+            <option value="category">Categoria</option>
+        </select>
+    </div>
+
+    <!-- Ordenaçaõ do maior para o menor-->
+    <a title="Ascendente" (click)="changeOrderDir('asc')"><i class="fas fa-fw fa-arrow-circle-up"></i></a>&nbsp;
+    <a title="Descendente" (click)="changeOrderDir('desc')"><i class="fas fa-fw fa-arrow-circle-down"></i></a>
+   
+
+</div>
+
+
+<!--  Lista as ferramentas se existir  -->
+
+<div *ngIf="tools">
+
+    <!--  Lista as ferramentas se existir  -->
+
+    <div *ngFor="let t of tools | async">
+        <p><img src="{{ t.image }}" alt="{{ t.name }}"></p>
+        <h3>{{t.name}}</h3>
+        <div>Marca: {{t.brand}} <br> Modelo: {{t.model}}</div>
+        <p>{{t.description}}</p>
+        <div>
+            <p class="small">Adquirido em: {{t.date | date : 'dd/MM/yyyy'}}  </p>
+
+            <!-- Botões para edição-->
+            <a title="Editar {{t.name}}"><i class="fas fa-fw fa-edit"></i></a>
+            <a title="Editar {{t.name}}"><i class="fas fa-fw fa-trash-alt"></i></a>
+
+        </div>
+
+    </div>
+
+</div>
+
