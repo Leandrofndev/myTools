@@ -9,6 +9,7 @@ export class E404Component implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+  }
 
 }
